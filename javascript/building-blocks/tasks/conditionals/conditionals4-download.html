@@ -34,6 +34,15 @@
 
     // Add your code here
 
+    if (machineActive) {
+      machineResult = "The machine is ready to be use.";
+      
+      pwdResult = pwd === "cheese" ? "Login successful." : "Login unsuccessful. Please try again.";
+
+    } else {
+      machineResult = "Please turn on the machine."
+    }
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
