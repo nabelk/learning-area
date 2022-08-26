@@ -21,6 +21,10 @@
     <section class="preview">
 
 
+  <p>
+    <div>Foods to eat:</div>
+    <div id="demo"t></div>
+  </p>
 
     </section>
 
@@ -28,8 +32,18 @@
   <script>
     const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
     const list = document.createElement('ul');
+  
+ 
+    
 
     // Add your code here
+    let text ="<ul>";
+    for (const food of myArray){
+      
+       text += `<li>${food}</li>`;
+    }
+   text += `</ul>`;
+    document.getElementById("demo").innerHTML = text;
 
     // Don't edit the code below here!
 
