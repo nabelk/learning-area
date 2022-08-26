@@ -19,36 +19,30 @@
   <body>
 
     <section class="preview">
-
-
-  <p>
-    <div>Foods to eat:</div>
-    <div id="demo"t></div>
-  </p>
-
+      
     </section>
 
-  </body>
-  <script>
-    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
-    const list = document.createElement('ul');
-  
- 
-    
+    <script>
+      const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+      const list = document.createElement('ul');
 
-    // Add your code here
-    let text ="<ul>";
-    for (const food of myArray){
+      // Add your code here
+
+      // If (const foodList) and (list.appenChild(foodlist)) outside loop , it won't work:
+      /* const foodlist = document.createElement('li'); */
       
-       text += `<li>${food}</li>`;
-    }
-   text += `</ul>`;
-    document.getElementById("demo").innerHTML = text;
+      for (let i = 0; i < myArray.length; i++){
+        const foodlist = document.createElement('li');
+        foodlist.textContent += `${myArray[i]}`;
+        list.appendChild(foodlist);  
+      }
 
-    // Don't edit the code below here!
-
-    const section = document.querySelector('section');
-    section.appendChild(list);
-  </script>
+      // Don't edit the code below here!
+  
+      const section = document.querySelector('section');
+      section.appendChild(list); 
+      </script>
+  </body>
+  
 
 </html>
