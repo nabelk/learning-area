@@ -26,7 +26,7 @@
 
   </body>
   <script>
-    const name = 'Mustafa';
+    const name = "Li Kang";
     const para = document.createElement('p');
 
     const phonebook = [
@@ -41,7 +41,13 @@
     ]
 
     // Add your code here
-
+    
+    for (let i = 0; i < phonebook.length; i++){
+      if(phonebook[i].name === name){
+        para.textContent += `The phone number that you search for is: ${phonebook[i].name} - ${phonebook[i].number}.`;
+        break;
+      }
+    }
     // Don't edit the code below here!
     const section = document.querySelector('section');
     section.appendChild(para);
