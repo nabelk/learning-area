@@ -43,3 +43,67 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+h1, h2 {
+  font-family:'Graduate', serif;
+  letter-spacing: 0.1em;
+}
+
+nav {
+  font-size: 1em;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.25em;
+  letter-spacing: 0.01em ;
+  word-spacing: 0.01em;
+}
+ h1 {
+  text-align: center;
+ }
+
+ .indent {
+  text-indent: 20px;
+ }
+
+ a:visited {
+  color: black;
+ }
+
+ a:hover{
+  text-decoration: none;
+
+ }
+
+ a:focus {
+  text-decoration: none ;
+ }
+
+ a{
+  color:lightcoral;
+ }
+
+ .indent a::after {
+  content: '';
+  display: inline-block;
+  width: 1.0em;
+  height: 1.0em;
+  background-image: url(external-link-52.png);
+  background-size: 1.0em;
+  margin-left: 5px;
+ }
+
+  .square-list {
+    list-style-type: square;
+  
+ }
+
+ nav ul, nav a {
+  list-style-type: none;
+  text-decoration: none;
+ }
+
+ nav a:visited {
+  color: lightcoral;
+ }
