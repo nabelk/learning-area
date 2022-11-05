@@ -15,6 +15,10 @@
       * {
         box-sizing: border-box;
       }
+
+      ul {
+        list-style: none;
+      }
     </style>
   </head>
 
@@ -22,11 +26,14 @@
     <form>
         <ul>
           <li>
-            <label for="gallery-img">Choose gallery images to upload</label>
+            <label for="gallery-img">Choose gallery images to upload<br>
+              <input type="file" id="gallery-img" name="file" accept="image/jpeg, image/png" multiple  />
+            </label>
+            
 
           </li>
         </ul>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </body>
 

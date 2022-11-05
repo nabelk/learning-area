@@ -15,6 +15,10 @@
       * {
         box-sizing: border-box;
       }
+
+      ul {
+        list-style: none;
+      }
     </style>
   </head>
 
@@ -22,15 +26,17 @@
     <form>
       <ul>
         <li>
-          User ID
-
+          <label for="userid">User Id:</label>
+          <input type="text" id="userid" name="username" />      
         </li>
-        <li>
-          Password
 
+        <li>
+          <label for="userpassword">Password:</label>
+          <input type="password" id="userpassword" name="user_password" />  
         </li>
-        <li>
 
+        <li>
+          <button type="submit">Log In</button>
         </li>
       </ul>
     </form>
