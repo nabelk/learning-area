@@ -15,6 +15,10 @@
       * {
         box-sizing: border-box;
       }
+
+      ul {
+        list-style: none;
+      }
     </style>
   </head>
 
@@ -23,20 +27,22 @@
       <ul>
         <li>
           <label for="food">Enter your favorite food:</label>
+          <input type="text" name="food" id="food" list="foodsuggestion" />
 
-
-              Salad
-              Curry
-              Pizza
-              Fajitas
-              Biscuits
-              Crisps
-              Fruit
-              Breadsticks
+          <datalist id="foodsuggestion">
+                <option>Salad</option>
+                <option>Curry</option>
+                <option>Pizza</option>
+                <option>Fajitas</option>
+                <option>Biscuits</option>
+                <option>Crisps</option>
+                <option>Fruit</option>
+                <option>Breadsticks</option>
+          </datalist>
 
         </li>
         <li>
-          <button>Submit choice</button>
+          <button id="submit">Submit choice</button>
         </li>
       </ul>
     </form>

@@ -15,6 +15,10 @@
       * {
         box-sizing: border-box;
       }
+
+      ul {
+        list-style: none;
+      }
     </style>
   </head>
 
@@ -24,19 +28,24 @@
         <li>
           <label for="food">Pick your favorite food:</label>
 
-              Salad
-              Curry
-              Pizza
-              Fajitas
-
-              Biscuits
-              Crisps
-              Fruit
-              Breadsticks
+              <select name="food" id="food">
+                <optgroup label="mains">
+                  <option>Salad</option>
+                  <option>Curry</option>
+                  <option>Pizza</option>
+                  <option>Fajitas</option>
+                </optgroup>
+                <optgroup label="snacks">
+                  <option>Biscuits</option>
+                  <option>Crisps</option>
+                  <option>Fruit</option>
+                  <option>Breadsticks</option>
+                </optgroup>
+              </select>
 
         </li>
         <li>
-          <button>Submit choice</button>
+          <button type="submit">Submit choice</button>
         </li>
       </ul>
     </form>
