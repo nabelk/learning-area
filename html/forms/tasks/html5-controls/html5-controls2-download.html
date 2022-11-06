@@ -15,6 +15,10 @@
       * {
         box-sizing: border-box;
       }
+
+      ul {
+        list-style: none;
+      }
     </style>
   </head>
 
@@ -22,11 +26,12 @@
     <form>
       <ul>
         <li>
-          <label for="max-invite">Select maximum number of invitations</label>
+          <p><label for="max-invite">Select maximum number of invitations</label></p>
+          <p><input type="range" id="max-invite" name="invited" min="1" max="30" value="10" /> <span class="invite-output"></span></p>
           
         </li>
         <li>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </li>
       </ul>
     </form>
