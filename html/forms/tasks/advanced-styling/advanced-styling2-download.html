@@ -22,6 +22,41 @@
         font-family: inherit;
         font-size: 100%;
         padding: 0; margin: 0;
+        appearance: none;
+      }
+
+      input[type="radio"]{
+        position: relative;
+        width:20px; height:20px;
+        border-radius: 100px;
+        border: 2px solid black;
+        vertical-align: top;
+        margin-bottom: 10px;
+      }
+
+      input[type="radio"]::before {
+        display: block;
+        content: " ";
+        background-color: green;
+        width: 10px; height: 10px;
+        border-radius: 6px;
+        transform: translate(3px, 3px) scale(0);
+        transform-origin: center;
+        transition: all 0.3s ease-in;
+      }
+
+      input[type="radio"]:checked::before {
+        transform: translate(3px, 3px) scale(1);
+        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+      }
+            
+      ul {
+        list-style: none;
+        margin-left: -20px;
+      }
+
+      li > input[type="radio"] {
+        margin-right: 5px;
       }
     </style>
   </head>
@@ -32,16 +67,16 @@
         <legend>Who is your favorite pony?</legend>
         <ul>
           <li>
-            <label for="pinkie">Pinkie Pie</label>
             <input type="radio" id="pinkie" name="pony" value="pinkie">
+            <label for="pinkie">Pinkie Pie</label>
           </li>
           <li>
-            <label for="rainbow">Rainbow Dash</label>
             <input type="radio" id="rainbow" name="pony" value="rainbow">
+            <label for="rainbow">Rainbow Dash</label>
           </li>
           <li>
-            <label for="twilight">Twilight Sparkle</label>
             <input type="radio" id="twilight" name="pony" value="twilight">
+            <label for="twilight">Twilight Sparkle</label>
           </li>
         </ul>
       </fieldset>
