@@ -15,6 +15,14 @@
       * {
         box-sizing: border-box;
       }
+
+      input:invalid, textarea:invalid {
+        background-color: lightcoral;
+      }
+
+      input:valid, textarea:valid {
+        background-color: gray;
+      }
     </style>
   </head>
 
@@ -24,23 +32,22 @@
       <ul>
         <li>
           <label for="uname">User name:</label>
-          <input type="text" name="uname" id="uname" required>
+          <input type="text" name="uname" id="uname" minlength="5" maxlength="20" pattern="[a-z][.][a-z0-9]{3,}" required>
         </li>
         <li>
           <label for="email">Email address:</label>
-          <input type="text" name="email" id="email" required>
+          <input type="text" name="email" id="email" pattern="[A-Za-z0-9]*@[a-z]*.[comrg]{3}" required>
         </li>
         <li>
           <label for="phone">Phone number:</label>
-          <input type="text" name="phone" id="phone" required>
+          <input type="text" name="phone" id="phone" maxlength="10" pattern="[0-9]{10}" required>
         </li>
         <li>
           <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment" required>
-          </textarea>
+          <textarea name="comment" id="comment" maxlength="200" required></textarea>
         </li>
         <li>
-          <button>Submit comment</button>
+          <button type="submit">Submit comment</button>
         </li>
       </ul>
     </form>
