@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>JSON: Task 1</title>
     <style>
       p {
@@ -17,33 +17,42 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-    const section = document.querySelector('section');
+    const section = document.querySelector("section");
 
-    let para1 = document.createElement('p');
-    let para2 = document.createElement('p');
-    let motherInfo = 'The mother cats are called ';
+    let para1 = document.createElement("p");
+    let para2 = document.createElement("p");
+    let motherInfo = "The mother cats are called ";
     let kittenInfo;
-    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+    const requestURL =
+      "https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json";
 
     fetch(requestURL)
-    .then(response => response.text())
-    .then(text => displayCatInfo(text))
+      .then((response) => response.text())
+      .then((text) => displayCatInfo(text));
 
     function displayCatInfo(catString) {
       let total = 0;
       let male = 0;
+      let female = 0;
+      const catData = JSON.parse(catString);
 
       // Add your code here
 
+      motherInfo += `${catData[0].name}, ${catData[1].name} and ${catData[2].name}`;
+
+      for (const cat of catData) {
+        const kittens = cat.kittens;
+        total += kittens.length;
+
+        kittens.forEach((element) => {
+          element.gender === "m" ? (male += 1) : (female += 1);
+        });
+      }
+
+      kittenInfo = `The total number of kittens is ${total}. Kittens are ${male} male and ${female} female.`;
       // Don't edit the code below here!
 
       para1.textContent = motherInfo;
@@ -53,5 +62,4 @@
     section.appendChild(para1);
     section.appendChild(para2);
   </script>
-
 </html>
